@@ -1,4 +1,4 @@
-name: edgexfoundry-core
+name: edgexfoundry-core-ijohnson
 version: '0.5.1+cali-20180413'
 summary: Provides a full set of Edgex Foundry core microservices.
 description: |
