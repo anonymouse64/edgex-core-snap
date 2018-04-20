@@ -124,5 +124,5 @@ if [ $DEVICE_VIRTUAL = "y" ] ; then
                -Dlogging.level.org.edgexfoundry=DEBUG \
                -Dlogging.file=$SNAP_COMMON/edgex-device-virtual.log \
                -Dapplication.device-profile-paths=$SNAP_COMMON/bacnet_profiles,$SNAP_COMMON/modbus_profiles \
-               $SNAP/jar/device-virtual/device-virtual.jar &
+               $SNAP/jar/device-virtual/device-virtual.jar 
 fi

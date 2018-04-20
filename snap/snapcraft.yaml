@@ -31,16 +31,15 @@ apps:
   core-config-seed:
     command: bin/start-config-seed.sh
     plugs: [network, network-bind]
-  start-edgex:
-    command: bin/start-edgex.sh
-    plugs: [network, network-bind]
   mongod:
     command: mongo/mongo-daemon.sh
     daemon: simple
     plugs: [network, network-bind]
-  stop-edgex:
-    command: bin/stop-edgex.sh
-    plugs: [system-observe, process-control]
+  edgex:
+    command: bin/start-edgex.sh
+    plugs: [network, network-bind, system-observe, process-control]
+    daemon: simple
+    stop-command: bin/stop-edgex.sh
   mongo:
     command: bin/mongo
     plugs: [network]
